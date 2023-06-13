@@ -26,10 +26,17 @@ class Ship():
         self.moving_right = False
         self.moving_left = False
         
+        
+        #update usually updates the posiiton of the ship
     def update(self):
         """Update the ship's position based on the movement flag.""" 
+        ## allows us to stay within the screen
+        
+        ## if the ship is moving right and the ship hasnt touch the screen
+        ##     move the ship to the right with 1.5x speed
         if self.moving_right and self.rect.right < self.screen_rect.right:
            self.center += self.ai_settings.ship_speed_factor
+        ## if the ship is moving left and hasnt touch the screen
         if self.moving_left and self.rect.left > 0:
             self.center -= self.ai_settings.ship_speed_factor
             
