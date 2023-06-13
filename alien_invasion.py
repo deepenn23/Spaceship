@@ -7,14 +7,15 @@ import game_functions as gf
 def run_game():
     #intialize game and create the screen object
     '''settings are in the setting.py'''
-    pygame.init()
-    ai_settings = Settings()
+    pygame.init() 
+    ai_settings = Settings() 
     screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
-    ship = Ship(screen)
+    ship = Ship(ai_settings,screen) #
 
 # listen for any events from the user
     while True:
-       gf.check_events()
+       gf.check_events(ship)
+       ship.update()
        gf.update_screen(ai_settings, screen, ship)
        
 
