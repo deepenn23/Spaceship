@@ -21,7 +21,7 @@ def check_keydown_events(event, ship):
     elif event.key == pygame.K_LEFT:
         ship.rect.centerx -= 1
         ship.moving_left = True
-                
+    
 def check_keyup_events(event, ship):   
      """Respond to key releases."""
      if event.key == pygame.K_RIGHT:
