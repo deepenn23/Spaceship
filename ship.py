@@ -18,7 +18,6 @@ class Ship():
         # Start each new ship at the bottom center of the screen.
         self.rect.centerx = self.screen_rect.centerx
         self.rect.bottom = self.screen_rect.bottom
-        
         # Store a decimal value for the ship's center.
         self.center = float(self.rect.centerx)
         
@@ -31,7 +30,6 @@ class Ship():
     def update(self):
         """Update the ship's position based on the movement flag.""" 
         ## allows us to stay within the screen
-        
         ## if the ship is moving right and the ship hasnt touch the screen
         ##     move the ship to the right with 1.5x speed
         if self.moving_right and self.rect.right < self.screen_rect.right:
@@ -42,7 +40,6 @@ class Ship():
             
         self.rect.centerx = self.center
     
-        
         
     def blitme(self):
         # blit function allows you to draw one surface onto another
