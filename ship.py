@@ -40,6 +40,9 @@ class Ship():
             
         self.rect.centerx = self.center
     
+    def center_ship(self):
+        """Center the ship on the screen."""
+        self.center = self.screen_rect.centerx
         
     def blitme(self):
         # blit function allows you to draw one surface onto another
