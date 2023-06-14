@@ -12,8 +12,8 @@ class Ship():
         
         #loading the image and get its rectangle
         self.image = pygame.image.load('images/ship.bmp')
-        self.rect = self.image.get_rect()
-        self.screen_rect = screen.get_rect()
+        self.rect = self.image.get_rect()  # image rectangle => represents position and size
+        self.screen_rect = screen.get_rect()  #screen rectangle
         
         # Start each new ship at the bottom center of the screen.
         self.rect.centerx = self.screen_rect.centerx
